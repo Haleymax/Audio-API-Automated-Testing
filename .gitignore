@@ -1,0 +1,4 @@
+﻿config/__pycache__
+data/__pycache__
+testcase/__pycache__
+testcase/test_api_audio/__pycache__
