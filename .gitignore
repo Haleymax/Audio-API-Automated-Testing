@@ -2,3 +2,4 @@
 data/__pycache__
 testcase/__pycache__
 testcase/test_api_audio/__pycache__
+.idea
