@@ -5,11 +5,14 @@ from testcase.test_api_audio.conftest import audio_case
 
 package = "com.u3d.webglhost"
 
-class TestRunAudioApi:
 
-    @pytest.mark.name(f"audio api test")
-    @pytest.mark.parametrize("name, api", audio_case)
-    def test_audio(self, name, api, rp_logger):
+class TestRunAudioApi:
+    @pytest.mark.parametrize(
+        "name, api",
+        audio_case,
+        ids=[f" {case[0]}" for case in audio_case]  # 自定义用例名称
+    )
+    def test_audio(self, name, api, rp_logger,):
         rp_logger.debug(f"Running test for {name} with API {api}")
         print(f"Running test for {name} with API {api}")
         webgl = WebglhostPage()
@@ -57,5 +60,6 @@ class TestRunAudioApi:
         webgl.stop_app(package)
         assert is_pass == "yes"
         assert contrast_wx == "yes"
+        assert True
 
 # pytest -s test_01_audio.py::TestRunAudioApi::test_audio
