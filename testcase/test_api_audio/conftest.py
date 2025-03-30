@@ -14,4 +14,9 @@ def rp_logger():
     logging.setLoggerClass(RPLogger)
     return logger
 
+@pytest.fixture(scope="session")
+def url():
+    url = ""
+    return url
+
 audio_case = generate_case(setting.YAML_FILE_PATH)['audio']
