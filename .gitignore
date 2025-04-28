@@ -5,3 +5,4 @@ testcase/test_api_audio/__pycache__
 .idea
 core/__pycache__
 page/__pycache__
+report
