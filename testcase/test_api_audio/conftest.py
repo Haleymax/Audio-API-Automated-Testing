@@ -16,7 +16,7 @@ def rp_logger():
 
 @pytest.fixture(scope="session")
 def url():
-    url = ""
+    url = f'testscripts/audio/test.js'
     return url
 
 audio_case = generate_case(setting.YAML_FILE_PATH)['audio']

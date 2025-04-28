@@ -5,3 +5,5 @@ class BasePage:
         self.client = u2.connect()
 
 
+    def __del__(self):
+        self.client.exists()
